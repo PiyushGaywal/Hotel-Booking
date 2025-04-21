@@ -12,6 +12,8 @@ const review=require('./Routes/Displauroutes/review')
 const db=require('./Utils/db')
 const bodyParser = require('body-parser');
 const Auth=require('./Routes/AuthRoutes')
+require('dotenv').config();
+
 
 
 
@@ -30,6 +32,9 @@ app.use(contact)
 app.use(review)
 app.use(Auth)
 
-app.listen(8000,()=>{
-    console.log('Server Run Success');
-})
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
