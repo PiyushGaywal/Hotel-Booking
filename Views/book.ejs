@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <%- include('partials/nav')%>
+    <main>
+        <section class="booking-form">
+            <fieldset>
+            <legend>Enter Your Requirements</legend>
+            <form action="/submit-booking" method="POST">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="roomType">
+                    <option value="Deluxe">Deluxe Room</option>
+                    <option value="Family">Family Suite</option>
+                    <option value="Executive">Executive Suite</option>
+                </select>
+            
+                <label for="ac-type">AC Preference</label>
+                <select id="ac-type" name="acType"> 
+                    <option value="ac">AC</option>
+                    <option value="non-ac">Non AC</option>
+                </select>
+            
+                <label for="check-in">Check-in Date</label>
+                <input type="date" id="check-in" name="checkIn" required>
+            
+                <label for="check-out">Check-out Date</label>
+                <input type="date" id="check-out" name="checkOut" required>
+            
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+            
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment">
+                    <option value="Credit-card">Credit Card</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Debit-card">Debit Card</option>
+                    <option value="Cash">Cash on Arrival</option>
+                    <option value="Crypto">Crypto</option>
+                </select>
+            
+                <button type="submit">Book Now</button>
+            </form>
+            
+            
+        </fieldset>
+        </section>
+    </main>
+</body>
+<%- include('partials/footer')%>
+</html>

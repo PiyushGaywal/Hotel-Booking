@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Auth/signup.css">
+    <title>Signup</title>
+</head>
+<body>
+    <%- include('../partials/nav')%>
+    <form action="" method="post">
+        <label for="Name">Enter Your Name:</label>
+        <input type="text" id="Name" name="Name" required><br>
+
+        <label for="email">Enter Email</label>
+        <input type="email" id="email" name="Email" required><br>
+
+        <label for="pass">Enter Your Pass</label>
+        <input type="password" id="pass" name="Password" required>
+
+        <input type="submit">
+    </form>
+    <%- include('../partials/footer')%>
+</body>
+</html>
