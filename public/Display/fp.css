@@ -5,7 +5,6 @@ body {
     color: #333;
     line-height: 1.65;
 }
-
 .auth-buttons {
     position: absolute;
     top: 20px;
@@ -13,11 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 1000;
-}
-
-.login-link,
-.signup-link {
+  }
+  
+  .login-link,
+  .signup-link {
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -26,25 +24,30 @@ body {
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.login-link {
+  }
+  
+  .login-link {
     background-color: black;
-    color: #ff7e5f;
-}
-
-.signup-link {
+    color:#ff7e5f;
+  }
+  
+  .signup-link {
     background-color: black;
-    color: #ff7e5f;
-}
-
-.login-link:hover,
-.signup-link:hover {
+    color:#ff7e5f;
+  }
+  
+  .login-link:hover {
     color: black;
     background-color: yellow;
     transform: translateY(-2px);
-}
-
+  }
+  
+  .signup-link:hover {
+    color: black;
+    background-color: yellow;
+    transform: translateY(-2px);
+  }
+  
 header {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     color: white;
@@ -56,13 +59,11 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     list-style: none;
     background: #333;
     padding: 10px 0;
@@ -94,8 +95,6 @@ header {
     justify-content: center;
     color: white;
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .hero-content h2 {
@@ -120,7 +119,6 @@ header {
 section {
     padding: 40px 20px;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .room-grid {
@@ -135,7 +133,6 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 }
 
 footer {
@@ -145,58 +142,6 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
-
-footer p {
+footer p{
     font-size: 1.5rem;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-        font-size: 0.95rem;
-    }
-
-    .auth-buttons {
-        top: 10px;
-        right: 10px;
-    }
-
-    footer p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-
-    .auth-buttons {
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    .login-link,
-    .signup-link {
-        padding: 8px 14px;
-        font-size: 0.85rem;
-    }
-
-    .room-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer p {
-        font-size: 1rem;
-    }
 }
