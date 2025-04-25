@@ -22,11 +22,15 @@ exports.showSignup=(req,res,next)=>{
 }
 
 exports.Signup=async(req,res,next)=>{
-    const{Email,Password}=req.body
+    const{Email}=req.body
     try{
-        const euser= await Info.findOne({Email,Password})
+        const euser= await Info.findOne({Email})
         if(euser){
-            res.send('User Allready Registered Please Login')
+            res.send(`
+    <script>
+    alert("User Already Registered Please Login To Continue");
+    window.location.href = "/login";
+  </script>`)
         }else{
             const Nuser=new Info(req.body)
             await Nuser.save()

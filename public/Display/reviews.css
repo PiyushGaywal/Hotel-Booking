@@ -5,6 +5,7 @@ body {
     color: #333;
     background: #f9f9f9;
 }
+
 .review-container {
     margin: 50px auto;
     max-width: 900px;
@@ -12,7 +13,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
+
 .review-card {
     background-color: white;
     padding: 20px;
@@ -20,8 +24,9 @@ body {
     width: 280px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
-
 
 .review-card h3 {
     margin: 0 0 10px 0;
@@ -35,4 +40,18 @@ body {
     font-size: 1rem;
     line-height: 1.4;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        width: 100%;
+    }
+
+    .review-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .review-card p {
+        font-size: 0.95rem;
+    }
 }
