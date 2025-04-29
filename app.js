@@ -21,6 +21,14 @@ app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+const session = require('express-session');
+
+app.use(session({
+  secret: 'yourSecretKey',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
 
 
@@ -31,9 +39,7 @@ app.use(end)
 app.use(contact)
 app.use(review)
 app.use(Auth)
-
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

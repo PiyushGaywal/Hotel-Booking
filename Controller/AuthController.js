@@ -8,9 +8,10 @@ exports.login=async(req,res,next)=>{
         const{Email,Password}=req.body
         const user= await Info.findOne({Email,Password})
         if(user){
+            req.session.user=user
             res.render('Display/fp')
         }else{
-            res.send("Wrong Data Entered")
+            res.send("Please Enter Valid Details")
         }
     }catch(err){
         console.log('An Error Occured',err);

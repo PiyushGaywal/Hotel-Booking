@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+    background-color: #f4f7fa;
 }
 
 main {
@@ -16,43 +17,66 @@ main {
 
 fieldset {
     border-radius: 10px;
+    border: 2px solid #ff7e5f;
+    padding: 20px;
 }
 
 legend {
     color: #ff7e5f;
     font-size: 1.75rem;
+    margin-bottom: 10px;
 }
 
 section {
     text-align: center;
     max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     background: rgb(249, 249, 249);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #icon, #icon1, #icon3 {
     font-size: 2rem;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#icon:hover, #icon1:hover, #icon3:hover {
+    transform: scale(1.2);
 }
 
 #namel, #name2, #name3 {
     font-size: 2rem;
+    color: #333c4f;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #ff7e5f;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #feb47b;
 }
 
 .btn {
     display: inline-block;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #ff7e5f;
     font-weight: bold;
-    transition: background 0.3s ease;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    color: black;
+    transform: scale(1.05);
 }
 
 footer {
@@ -62,4 +86,10 @@ footer {
     padding: 20px 0;
     margin-top: auto;
     width: 100%;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #feb47b;
+    text-decoration: none;
 }

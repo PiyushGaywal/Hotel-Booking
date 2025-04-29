@@ -1,6 +1,7 @@
 const express=require('express')
-const bookp=express()
-bookp.use('/booking',(req,res,next)=>{
+const bookp=express.Router()
+const lmid=require('../../middleware/lmid')
+bookp.get('/booking',lmid,(req,res,next)=>{
     res.render('book')
 })
 
