@@ -39,6 +39,9 @@ app.use(end)
 app.use(contact)
 app.use(review)
 app.use(Auth)
+app.use((req,res)=>{
+  res.status(404).render('Display/404')
+})
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

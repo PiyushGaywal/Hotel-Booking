@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const Url="mongodb://localhost:27017/"
+const Url="mongodb+srv://Piyu1cbz:Piyu1cbz@mydatabase.bvhet.mongodb.net/?retryWrites=true&w=majority&appName=MyDatabase"
 const db=mongoose.connect(Url).
 then(()=>{console.log('Connect To Database Success');
 })
