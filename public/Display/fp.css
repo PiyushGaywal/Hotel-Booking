@@ -132,6 +132,12 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 1.25s;
+}
+.room:hover{
+    transform: scale(1.05);
+    background-color: black;
+    color: #ff7e5f;
 }
 
 footer {

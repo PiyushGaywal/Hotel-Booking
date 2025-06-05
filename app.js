@@ -13,10 +13,6 @@ const db=require('./Utils/db')
 const bodyParser = require('body-parser');
 const Auth=require('./Routes/AuthRoutes')
 require('dotenv').config();
-
-
-
-
 app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({ extended: true }));
